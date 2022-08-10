@@ -1,20 +1,31 @@
-<div *ngIf="list">
-    <h2>{{list.title | uppercase}}</h2>
-    <!-- <div>{{list.id}}</div> -->
-    <div>
-      <label for="list-title">Título: </label>
-      <input id="list-title" [(ngModel)]="list.title" placeholder="title">
-    </div>
-    <div>
-      <label for="list-title">Prioridade: </label>
-      <input id="list-title" [(ngModel)]="list.priority" placeholder="priority">
-    </div>
-    <div>
-      <label for="list-title">Descrição: </label>
-      <input id="list-title" [(ngModel)]="list.description" placeholder="description">
-    </div>
-    <button type="button" (click)="goBack()">go back</button>
-    <button type="button" (click)="save()">save</button>
-  
+<div class="po-row" *ngIf="list">
+  <div class="po-md-6">
+    <po-widget>  
+      <div class="po-md-12" >
+        <h2>Editar {{list.title | uppercase}}</h2>
+        <!-- <div class="po-md-3">{{list.id}}</div> -->
+      </div>
+      <div class="po-md-6">
+        <label class="po-label" for="list-title">Título: </label>
+        <input class="po-input" id="list-title" [(ngModel)]="list.title" >
+      </div>
+      <div class="po-md-6">
+        <label class="po-label" for="list-priority">Prioridade: </label>
+        <input class="po-input" id="list-priority" [(ngModel)]="list.priority">
+      </div>
+      <div class="po-md-12">
+        <label class="po-label" for="list-description">Descrição: </label>
+        <textarea class="po-textarea" name="description" id="list-description" [(ngModel)]="list.description" cols="10" rows="10"></textarea>
+        <!-- <input  > -->
+      </div>
+      <div class="po-md-12">
+        <!-- <button type="button" (click)="goBack()">go back</button>
+        <button type="button" (click)="save()">save</button> -->
+        <po-button p-label="Voltar" p-type="button" (p-click)="goBack()"> </po-button>
+        <po-button p-label="Salvar" p-type="button" (p-click)="save()"> </po-button>
+      </div>
+            
+    </po-widget>
+  </div>
 </div>
 

@@ -1,65 +1,54 @@
 /* listsComponent's private CSS styles */
 .lists {
-  margin: 0 0 2em 0;
   list-style-type: none;
-  padding: 0;
-  width: 15em;
-}
 
-input {
-  display: block;
-  width: 100%;
-  padding: .5rem;
-  margin: 1rem 0;
-  box-sizing: border-box;
-}
+    li {
+        position: relative;
+        cursor: pointer;
+        margin: 15px 0 0 0;
+    }
 
-.lists li {
-  position: relative;
-  cursor: pointer;
-}
+    li:hover {
+        left: .1em;
+    }
 
-.lists li:hover {
-  left: .1em;
-}
+    a {
+        color: #333;
+        text-decoration: none;
+        background-color: #EEE;
+        margin: .5em 0;
+        padding: 10px;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+        border: 0;
+    }
 
-.lists a {
-  color: #333;
-  text-decoration: none;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-}
+    a:hover {
+        color: #2c3a41;
+        background-color: #e6e6e6;
+    }
 
-.lists a:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
-}
+    a:active {
+        background-color: #525252;
+        color: #fafafa;
+    }
 
-.lists a:active {
-  background-color: #525252;
-  color: #fafafa;
-}
-
-.lists .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+    .badge {
+        display: none;
+        font-size: small;
+        color: white;
+        padding: 0.8em 0.7em 0 0.7em;
+        background-color: #405061;
+        line-height: 1em;
+        position: relative;
+        left: -1px;
+        top: -4px;
+        min-width: 16px;
+        text-align: right;
+        margin-right: .8em;
+        border-radius: 4px 0 0 4px;
+    }
 }
 
 .add-button {
@@ -75,13 +64,15 @@ input {
 
 button.delete {
   position: absolute;
-  left: 210px;
-  top: 5px;
+  right: 15px;
+  top: 15px;
   background-color: white;
-  color:  #525252;
+  border-radius: 4px;
+  color: #525252;
   font-size: 1.1rem;
   margin: 0;
   padding: 1px 10px 3px 10px;
+  border: 0;
 }
 
 button.delete:hover {

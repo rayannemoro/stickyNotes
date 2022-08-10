@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@po-ui/style/css/po-theme-default.min.css"
             ],
             "scripts": []
           },

@@ -1,15 +1,25 @@
-<div id="search-component">
-    <label for="search-box">List Search</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-  
-    <ul class="search-result">
-      <li *ngFor="let list of lists$ | async" >
-        <a routerLink="/detail/{{list.id}}">
-          {{list.title}}
-        </a><a routerLink="/detail/{{list.id}}">
-          {{list.description}}
-        </a>
-      </li>
-    </ul>
+
+<div class="po-md-6" id="search-component">
+  <div class="po-md-12">
+    <label for="search-box" class="po-label">Buscar</label>
+  </div>
+  <div class="po-md-6">
+    <input #searchBox id="search-box" class="po-input" (input)="search(searchBox.value)" />
+  </div>
+  <!-- <div class="po-md-6 po-lg-3">
+    <po-button p-label="Buscar" p-type="button" (p-click)="search(searchBox.value); searchBox.value=''"> </po-button>
+  </div> -->
 </div>
 
+<ul class="po-row search-result">
+  <li class="po-md-3" *ngFor="let list of lists$ | async" >
+    <a routerLink="/detail/{{list.id}}">
+      <span class="po-label">
+        <span class="badge">{{list.id}}</span> 
+        {{list.title}} <br>
+        {{list.priority}} <br>
+        {{list.description}}
+      </span>
+    </a>
+  </li>
+</ul>
