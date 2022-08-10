@@ -1,0 +1,20 @@
+<div *ngIf="list">
+    <h2>{{list.title | uppercase}}</h2>
+    <!-- <div>{{list.id}}</div> -->
+    <div>
+      <label for="list-title">Título: </label>
+      <input id="list-title" [(ngModel)]="list.title" placeholder="title">
+    </div>
+    <div>
+      <label for="list-title">Prioridade: </label>
+      <input id="list-title" [(ngModel)]="list.priority" placeholder="priority">
+    </div>
+    <div>
+      <label for="list-title">Descrição: </label>
+      <input id="list-title" [(ngModel)]="list.description" placeholder="description">
+    </div>
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+  
+</div>
+
